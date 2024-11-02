@@ -21,8 +21,25 @@ namespace ConsoleApp1
     internal class TwoSum
     {
         public TwoSum() {
-            (int[] nums, int target) = caseA(); // switch to caseA(), caseB() or caseC()
             int[] result;
+
+            Console.WriteLine("Choose case: 1. CaseA, 2. CaseB");
+            string getCase = Console.ReadLine();
+            (int[] nums, int target) = (new int[0],0); // switch to caseA(), caseB() or caseC()
+
+            switch (getCase)
+            {
+                case "1":
+                    (nums, target) = caseA();
+                    break;
+                case "2":
+                    (nums, target) = caseB();
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Defaulting to CaseA.");
+                    (nums, target) = caseA();
+                    break;
+            }
 
             result = addsToTarget(nums, target);
 
@@ -63,7 +80,6 @@ namespace ConsoleApp1
                 }
 
             }
-
             return result;
         }
     }

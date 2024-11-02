@@ -1,8 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+
+//https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+
+/*
+ * Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+ *
+ * The overall run time complexity should be O(log (m+n)).
+ */
+
+/* 
+ * This code does not fullfill the complexity requirement because of Concat (O(m+n)) and Sort (O(m+n(log(M+N)))
+*/
 
 namespace ConsoleApp1
 {
